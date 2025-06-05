@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head><title>Upload Successful</title></head>
+<body>
+<h2>File uploaded!</h2>
+<p>Share this secure download link (valid for 24 hours or one download):</p>
+<a href="{% url 'download' token=token %}">{{ request.build_absolute_uri|slice:":-1" }}download/{{ token }}/</a>
+</body>
+</html>
